@@ -1,0 +1,175 @@
+<!-- canbus-initialize -->
+<script type="text/javascript">
+    RED.nodes.registerType('canbus-initialize',{
+        category: 'CANBus',
+        color: '#ebe834',
+        defaults: {
+            name: {value:""}
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "cog.svg",
+        inputLabels: "Int: Bitrate",
+        outputLabels: "String: Command",
+        label: function() {
+            return this.name||"canbus-initialize";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="canbus-initialize">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="canbus-initialize">
+    <p>A note to configure the can port on the cc100</p>
+</script>
+
+<!-- canbus-opperational -->
+<script type="text/javascript">
+    RED.nodes.registerType('canbus-opperational',{
+        category: 'CANBus',
+        color: '#ebe834',
+        defaults: {
+            name: {value:""}
+        },
+        inputs: 1,
+        outputs: 0,
+        icon: "arrow-in.svg",
+        inputLabels: "Int: Address",
+        label: function() {
+            return this.name||"canbus-opperational";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="canbus-opperational">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="canbus-opperational">
+    <p>A note to configure the can port on the cc100</p>
+</script>
+
+<!-- canbus-stopped -->
+<script type="text/javascript">
+    RED.nodes.registerType('canbus-stopped',{
+        category: 'CANBus',
+        color: '#ebe834',
+        defaults: {
+            name: {value:""}
+        },
+        inputs: 1,
+        outputs: 0,
+        icon: "arrow-in.svg",
+        inputLabels: "Int: Address",
+        label: function() {
+            return this.name||"canbus-stopped";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="canbus-stopped">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="canbus-stopped">
+    <p>A note to configure the can port on the cc100</p>
+</script>
+
+
+<!-- canbus-pre-opperational -->
+<script type="text/javascript">
+    RED.nodes.registerType('canbus-pre-opperational',{
+        category: 'CANBus',
+        color: '#ebe834',
+        defaults: {
+            name: {value:""}
+        },
+        inputs: 1,
+        outputs: 0,
+        icon: "arrow-in.svg",
+        inputLabels: "Int: Address",
+        label: function() {
+            return this.name||"canbus-pre-opperational";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="canbus-pre-opperational">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="canbus-pre-opperational">
+    <p>A note to configure the can port on the cc100</p>
+</script>
+
+<!-- canbus-reset -->
+<script type="text/javascript">
+    RED.nodes.registerType('canbus-reset',{
+        category: 'CANBus',
+        color: '#ebe834',
+        defaults: {
+            name: {value:""}
+        },
+        inputs: 1,
+        outputs: 0,
+        icon: "arrow-in.svg",
+        inputLabels: "Int: Address",
+        label: function() {
+            return this.name||"canbus-reset";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="canbus-reset">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="canbus-reset">
+    <p>A note to configure the can port on the cc100</p>
+</script>
+
+<!-- canbus-reset-commmunications -->
+<script type="text/javascript">
+    RED.nodes.registerType('canbus-reset-commmunications',{
+        category: 'CANBus',
+        color: '#ebe834',
+        defaults: {
+            name: {value:""}
+        },
+        inputs: 1,
+        outputs: 0,
+        icon: "arrow-in.svg",
+        inputLabels: "Int: Address",
+        label: function() {
+            return this.name||"canbus-reset-commmunications";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="canbus-reset-commmunications">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="canbus-reset-commmunications">
+    <p>A note to configure the can port on the cc100</p>
+</script>
