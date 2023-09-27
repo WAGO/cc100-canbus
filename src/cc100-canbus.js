@@ -6,6 +6,7 @@ module.exports = function(RED) {
     //Installs iproute2 if not present and sets up the can Interface
     function CanBusInitialize(config) {
         RED.nodes.createNode(this,config);
+        this.interface = config.interface;
         var node = this;
         var command; 
         node.on('input', function(msg) {
@@ -14,10 +15,10 @@ module.exports = function(RED) {
             //Runs ip -V, gets stderr if iproute2 is not installed
             exec(command, (stderr) => {
                 if(stderr){
-                    command = 'apk add iproute2 && ip link set can0 type can bitrate ' + msg.payload + ' && ip link set up can0';
+                    command = 'apk add iproute2 && ip link set ' + node.interface + ' type can bitrate ' + msg.payload + ' && ip link set up ' + node.interface;
                 }
                 else{
-                    command = 'ip link set can0 type can bitrate ' + msg.payload + ' && ip link set up can0'
+                    command = 'ip link set  ' + node.interface + ' type can bitrate ' + msg.payload + ' && ip link set up ' + node.interface
                 }
                 exec(command)
                 msg.payload = command;
@@ -30,13 +31,14 @@ module.exports = function(RED) {
     //Node: canbus oppertaional
     function CanBusOpperational(config) {
         RED.nodes.createNode(this,config);
-
+        this.interface = config.interface;
+        var node = this;
+        
         //Create can channel
         var sock;
-        sock = can.createRawChannel("can0", true);
+        sock = can.createRawChannel(node.interface, true);
         sock.start;
 
-        var node = this;
 
         //Define Frame
         var frame = {};
@@ -60,13 +62,13 @@ module.exports = function(RED) {
     //Node: canbus stopped
     function CanBusStopped(config) {
         RED.nodes.createNode(this,config);
-
+        this.interface = config.interface;
+        var node = this;
+        
         //Create can channel
         var sock;
-        sock = can.createRawChannel("can0", true);
+        sock = can.createRawChannel(node.interface, true);
         sock.start;
-
-        var node = this;
 
         //Define Frame
         var frame = {};
@@ -90,13 +92,13 @@ module.exports = function(RED) {
     //Node: canbus pre-opperational
     function CanBusPreOpperational(config) {
         RED.nodes.createNode(this,config);
-
+        this.interface = config.interface;
+        var node = this;
+        
         //Create can channel
         var sock;
-        sock = can.createRawChannel("can0", true);
+        sock = can.createRawChannel(node.interface, true);
         sock.start;
-
-        var node = this;
 
         //Define Frame
         var frame = {};
@@ -120,13 +122,13 @@ module.exports = function(RED) {
     //Node: canbus reset
     function CanBusReset(config) {
         RED.nodes.createNode(this,config);
-
+        this.interface = config.interface;
+        var node = this;
+        
         //Create can channel
         var sock;
-        sock = can.createRawChannel("can0", true);
+        sock = can.createRawChannel(node.interface, true);
         sock.start;
-
-        var node = this;
 
         //Define Frame
         var frame = {};
@@ -150,13 +152,13 @@ module.exports = function(RED) {
     //Node: canbus reset communications
     function CanBusResetCommunications(config) {
         RED.nodes.createNode(this,config);
-
+        this.interface = config.interface;
+        var node = this;
+        
         //Create can channel
         var sock;
-        sock = can.createRawChannel("can0", true);
+        sock = can.createRawChannel(node.interface, true);
         sock.start;
-
-        var node = this;
 
         //Define Frame
         var frame = {};
