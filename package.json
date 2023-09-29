@@ -1,6 +1,6 @@
 {
   "name": "@wago-gmbh/cc100-canbus",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node RED module for basic functions with the CAN intferface of the cc100",
   "main": "src/cc100-canbus.js",
   "dependencies": {
