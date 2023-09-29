@@ -1,0 +1,33 @@
+{
+  "name": "@wago-gmbh/cc100-canbus",
+  "version": "1.0.0",
+  "description": "Node RED module for basic functions with the CAN intferface of the cc100",
+  "main": "src/cc100-canbus.js",
+  "dependencies": {
+    "socketcan": "^4.0.4"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node-red",
+    "wago",
+    "CC100",
+    "canbus"
+  ],
+  "node-red": {
+    "nodes": {
+      "version": ">=3.1.0",
+      "canbus-node-red": "src/cc100-canbus.js"
+    }
+  },
+  "homepage": "https://github.com/WAGO/cc100-canbus",
+  "bugs": {
+    "url": "https://github.com/WAGO/cc100-canbus/issues"
+  },
+  "author": "konrad.holsmoelle@wago.com",
+  "contributors": [
+    "Konrad Holsmölle"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
