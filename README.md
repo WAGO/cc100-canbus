@@ -19,38 +19,38 @@ docker run -d \
 -v node_red_user_data:/data \
 nodered/node-red
 ```
-To install the module in Node-RED use the palette or npm install @wago/cc100-canbus.
+To install the module in Node-RED use the palette or `npm i @wago-gmbh/cc100-canbus`.
 ## Nodes
 All nodes use the interface `can0` as default. To use a different interface change the name of the interface in the node properties.<br>
 ### canbus-initalize
 Initializes the CAN interface on the device with the given bitrate.<br>
-<a href="kbus-daemon gif"><img src=images/canbus-initialize.png></a><br>
+<a href="canbus-initialize"><img src=images/canbus-initialize.png></a><br>
 Input: Bitrate of the can network as integer<br>
 Output: Command executed by the node as string
 
 ### canbus-opperational
 Forces the addressed device to transit to the opertaional state. **Flow has to be deployed after each initialization of the CAN interface.** <br>
-<a href="kbus-daemon gif"><img src=images/canbus-operational.png></a><br>
+<a href="canbus-operational"><img src=images/canbus-operational.png></a><br>
 Input: Address of the device to be addressed as integer.
 
 ### canbus-stopped
 Forces the addressed device to transit to the stopped state. **Flow has to be deployed after each initialization of the CAN interface.** <br>
-<a href="kbus-daemon gif"><img src=images/canbus-stopped.png></a><br>
+<a href="canbus-stopped"><img src=images/canbus-stopped.png></a><br>
 Input: Address of the device to be addressed as integer.
 
 ### canbus-pre-opperational
 Forces the addressed device to transit to the pre-opertaional state. **Flow has to be deployed after each initialization of the CAN interface.** <br>
-<a href="kbus-daemon gif"><img src=images/canbus-pre-operational.png></a><br>
+<a href="canbus-pre-opperational"><img src=images/canbus-pre-operational.png></a><br>
 Input: Address of the device to be addressed as integer.
 
 ### canbus-reset
 Forces the addressed device to transit to reset. **Flow has to be deployed after each initialization of the CAN interface.** <br>
-<a href="kbus-daemon gif"><img src=images/canbus-reset.png></a><br>
+<a href="canbus-reset"><img src=images/canbus-reset.png></a><br>
 Input: Address of the device to be addressed as integer.
 
 ### canbus-reset-communication
 Forces the addressed device to transit to reset communications. **Flow has to be deployed after each initialization of the CAN interface.** <br>
-<a href="kbus-daemon gif"><img src=images/canbus-reset-communications.png></a><br>
+<a href="canbus-reset-communications"><img src=images/canbus-reset-communications.png></a><br>
 Input: Address of the device to be addressed as integer.
 
 To address all devices on a network instead of a specific device use 0 as address.
